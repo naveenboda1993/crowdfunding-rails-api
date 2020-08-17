@@ -9,17 +9,37 @@ default: &default
   pool: 5
   timeout: 5000
 
+# development:
+#   <<: *default
+#   database: crowdpouch_dev
 development:
-  <<: *default
-  database: crowdpouch_dev
-
+  database: dcilg2aahq7os2
+  adapter: postgresql
+  host: ec2-54-224-124-241.compute-1.amazonaws.com
+  port: 5432
+  user: ccleuxbziedwpw
+  password: cb6f3796e80fecf95f0dd17b1b64463201bc32de726baf9bb4e2b1593ec5488a
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: crowdpouch_test
+# test:
+#   <<: *default
+#   database: crowdpouch_test
 
+# production:
+#   <<: *default
+#   database: crowdpouch_prod
+test:
+  database: dcilg2aahq7os2
+  adapter: postgresql
+  host: ec2-54-224-124-241.compute-1.amazonaws.com
+  port: 5432
+  user: ccleuxbziedwpw
+  password: cb6f3796e80fecf95f0dd17b1b64463201bc32de726baf9bb4e2b1593ec5488a
 production:
-  <<: *default
-  database: crowdpouch_prod
+  database: dcilg2aahq7os2
+  adapter: postgresql
+  host: ec2-54-224-124-241.compute-1.amazonaws.com
+  port: 5432
+  user: ccleuxbziedwpw
+  password: cb6f3796e80fecf95f0dd17b1b64463201bc32de726baf9bb4e2b1593ec5488a
