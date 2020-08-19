@@ -5,4 +5,4 @@ test:
   redirect_url: http://localhost:4200
 
 production:
-  redirect_url: https://crd-test.firebaseapp.com
+  redirect_url: https://crowdfunding-api-77586.web.app

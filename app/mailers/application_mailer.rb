@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'mail.admin@crowdpouch.com'
+  default from: 'mithunv165@gmail.com'
   layout 'mailer'
 end

@@ -27,7 +27,7 @@ class UserMailer < ApplicationMailer
     @project = project
     redirect_url = Rails.configuration.email_confirmation['redirect_url']
     @project_link =  "#{redirect_url}/projects/#{project.id}"
-    mail(:to => "report@crowdpouch.com", :subject => "Project Reported")
+    mail(:to => "mithunv165@gmail.com", :subject => "Project Reported")
   end
 
 end
