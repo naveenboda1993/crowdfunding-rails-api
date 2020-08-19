@@ -1,7 +1,8 @@
 class Api::V1::UsersController < ApplicationController
   
-  skip_before_action :authenticate_request, only: [:create, :confirm_email, :show]
-  before_action :find_user, only: [:update, :show]
+  # skip_before_action :authenticate_request, only: [:create, :confirm_email, :show]
+  # before_action :find_user, only: [:update, :show]
+  skip_before_action :authenticate_request
 
   def create
     user = User.new(auth_params)
@@ -25,7 +26,11 @@ class Api::V1::UsersController < ApplicationController
     redirect_url = Rails.configuration.email_confirmation['redirect_url']
     redirect_to "#{redirect_url}?message=#{message}"
   end
-
+  
+  def index
+    @user = User.all
+    render json: @user, status: :ok
+  end
   def show
     render json: @user, status: :ok
   end

@@ -93,8 +93,8 @@ Rails.application.configure do
    :domain => 'gmail.com',
    :authentication => :plain,
    :user_name => 'mithunv165@gmail.com',
-   :password => 'mithunv165@gmail.com'
+   :password => '8217465557'
   }
-  config.action_mailer.default_url_options = { host: 'https://crowdfunding-api-77586.web.app/' }
+  config.action_mailer.default_url_options = { host: 'https://crowdfunding-rails.herokuapp.com' }
 
 end
